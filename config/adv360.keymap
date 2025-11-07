@@ -96,5 +96,15 @@
             display-name = "Yellow";
             status = "reserved";
         };
+
+        layer_8 {
+            bindings = <
+&kp EQUAL  &kp N1     &kp N2    &kp N3  &kp N4  &kp N5  &trans                                      &trans  &kp N6  &kp N7  &kp N8     &kp N9    &kp N0    &kp MINUS
+&kp TAB    &kp Q      &kp W     &kp F   &kp P   &kp B   &trans                                      &trans  &kp J   &kp L   &kp U      &kp Y     &kp SEMI  &kp BSLH
+&kp ESC    &kp A      &kp R     &kp S   &kp T   &kp G   &trans  &trans  &trans      &trans  &trans  &trans  &kp M   &kp N   &kp E      &kp I     &kp O     &kp APOS
+&kp LSHFT  &kp Z      &kp X     &kp C   &kp D   &kp V                   &trans      &trans                  &kp K   &kp H   &kp COMMA  &kp DOT   &kp FSLH  &kp RSHFT
+&trans     &kp GRAVE  &kp CAPS  &trans  &trans          &trans  &trans  &trans      &trans  &trans  &trans          &trans  &trans     &kp LBKT  &kp RBKT  &trans
+            >;
+        };
     };
 };
