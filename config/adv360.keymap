@@ -42,6 +42,13 @@
             bindings = <&kp EQUAL &kp GREATER_THAN>;
             label = "ARROW_MACRO";
         };
+
+        delete_line: delete_line {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp END &kp LS(HOME) &kp LC(C) &kp DELETE>;
+            label = "DELETE_LINE";
+        };
     };
 
     keymap {
@@ -113,11 +120,11 @@
 
         navigation {
             bindings = <
-&trans  &trans  &trans         &trans         &kp END         &trans        &trans                                      &trans  &trans    &trans     &trans        &trans         &kp HOME  &trans
-&trans  &trans  &kp LC(RIGHT)  &trans         &trans          &trans        &trans                                      &trans  &trans    &kp LC(Z)  &trans        &kp LC(ENTER)  &trans    &trans
-&trans  &trans  &trans         &kp LC(LS(K))  &trans          &trans        &trans  &trans  &trans      &trans  &trans  &trans  &kp LEFT  &kp DOWN   &kp UP_ARROW  &kp RIGHT      &trans    &trans
-&trans  &trans  &trans         &trans         &kp LEFT_SHIFT  &kp LC(LEFT)                  &trans      &trans                  &kp HOME  &trans     &trans        &kp END        &trans    &trans
-&trans  &trans  &trans         &trans         &trans                        &trans  &trans  &trans      &trans  &trans  &trans            &trans     &trans        &trans         &trans    &trans
+&trans  &trans  &trans         &trans        &kp END         &trans        &trans                                      &trans  &trans    &trans     &trans        &trans         &kp HOME     &trans
+&trans  &trans  &kp LC(RIGHT)  &trans        &trans          &trans        &trans                                      &trans  &trans    &kp LC(Z)  &trans        &kp LC(ENTER)  &kp K_PASTE  &trans
+&trans  &trans  &trans         &delete_line  &trans          &trans        &trans  &trans  &trans      &trans  &trans  &trans  &kp LEFT  &kp DOWN   &kp UP_ARROW  &kp RIGHT      &trans       &trans
+&trans  &trans  &trans         &trans        &kp LEFT_SHIFT  &kp LC(LEFT)                  &trans      &trans                  &trans    &trans     &trans        &trans         &trans       &trans
+&trans  &trans  &trans         &trans        &trans                        &trans  &trans  &trans      &trans  &trans  &trans            &trans     &trans        &trans         &trans       &trans
             >;
         };
 
